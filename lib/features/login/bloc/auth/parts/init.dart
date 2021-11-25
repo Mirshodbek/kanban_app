@@ -7,9 +7,9 @@ extension Init on BlocAuth {
   ) async {
     emit(StateAuthLoading());
     final cache = await repoCacheAuth.getItem();
-    if (cache.data != null && cache.data?.token != null) {
+    if (cache.data != null) {
       emit(StateAuthAuthorized(token: cache.data!.token!));
-      await repoCacheAuth.close();
+      print(token);
       return;
     } else {
       emit(
