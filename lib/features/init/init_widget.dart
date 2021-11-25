@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kanban_app/features/kanban/bloc/bloc_kanban.dart';
-import 'package:kanban_app/features/login/bloc/auth/bloc_auth.dart';
+import 'package:kanban_app/features/login/bloc/bloc_auth.dart';
 import 'package:kanban_app/repo/api/api.dart';
 import 'package:kanban_app/repo/api/auth/repo_auth.dart';
 import 'package:kanban_app/repo/api/kanban/repo_kanban.dart';

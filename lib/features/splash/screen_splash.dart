@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kanban_app/features/kanban/ui/screen_kanban.dart';
-import 'package:kanban_app/features/login/bloc/auth/bloc_auth.dart';
+import 'package:kanban_app/features/login/bloc/bloc_auth.dart';
 import 'package:kanban_app/features/login/ui/screen_login.dart';
 import 'package:kanban_app/widgets/app_loading_indicator.dart';
 class ScreenSplash extends StatelessWidget {

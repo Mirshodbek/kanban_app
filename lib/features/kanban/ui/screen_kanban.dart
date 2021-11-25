@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kanban_app/constants/constants.dart';
 import 'package:kanban_app/features/kanban/bloc/bloc_kanban.dart';
-import 'package:kanban_app/features/login/bloc/auth/bloc_auth.dart';
+import 'package:kanban_app/features/login/bloc/bloc_auth.dart';
 import 'package:kanban_app/features/login/ui/screen_login.dart';
 import 'package:kanban_app/local_dto/kanban/kanban_data.dart';
 import 'package:kanban_app/repo/local/kanban/local_repo_kanban.dart';

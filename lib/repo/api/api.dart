@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:kanban_app/features/login/bloc/auth/bloc_auth.dart';
+import 'package:kanban_app/features/login/bloc/bloc_auth.dart';
 
 class Api {
   BlocAuth? blocAuth;
