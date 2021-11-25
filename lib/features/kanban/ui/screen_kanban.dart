@@ -5,7 +5,9 @@ import 'package:kanban_app/features/kanban/bloc/bloc_kanban.dart';
 import 'package:kanban_app/features/login/bloc/auth/bloc_auth.dart';
 import 'package:kanban_app/features/login/ui/screen_login.dart';
 import 'package:kanban_app/local_dto/kanban/kanban_data.dart';
+import 'package:kanban_app/repo/local/kanban/local_repo_kanban.dart';
 import 'package:kanban_app/widgets/app_loader.dart';
+
 part 'rows/approved.dart';
 
 part 'rows/in_progress.dart';
@@ -58,6 +60,8 @@ class ScreenKanban extends StatelessWidget {
                 IconButton(
                   onPressed: () {
                     context.read<BlocAuth>().add(EventAuthLogout());
+                    RepositoryProvider.of<RepoCacheManagerKanban>(context)
+                        .removeItem();
                   },
                   icon: const Icon(
                     Icons.arrow_back_outlined,
@@ -72,6 +76,9 @@ class ScreenKanban extends StatelessWidget {
                     context.loaderOverlay.show();
                   } else {
                     context.loaderOverlay.hide();
+                  }
+                  if (state is StateKanbanErrorToken) {
+                    context.read<BlocAuth>().add(EventAuthRefreshToken());
                   }
                 },
                 builder: (context, state) {
@@ -101,7 +108,8 @@ class ScreenKanban extends StatelessWidget {
                       ],
                     );
                   }
-                  return const Text('error');
+
+                  return const SizedBox.shrink();
                 },
               ),
             ),

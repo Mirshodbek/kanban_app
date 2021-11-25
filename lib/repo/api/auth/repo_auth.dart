@@ -7,6 +7,8 @@ import 'base.dart';
 
 part 'parts/login.dart';
 
+part 'parts/refresh_token.dart';
+
 class RepoAuth implements BaseRepoAuth {
   RepoAuth({required this.api});
 
@@ -19,6 +21,11 @@ class RepoAuth implements BaseRepoAuth {
       username,
       password,
     );
+  }
+
+  @override
+  Future<ResultRepoAuth> refreshToken(String token) {
+    return _refreshToken(api, token);
   }
 }
 

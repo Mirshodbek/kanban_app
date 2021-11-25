@@ -9,6 +9,7 @@ class StateKanbanInitial extends StateBlocKanban {
 }
 
 class StateKanbanLoading extends StateBlocKanban {}
+class StateKanbanErrorToken extends StateBlocKanban {}
 
 class StateKanbanError extends StateBlocKanban implements AppError {
   StateKanbanError(this.message, {this.code});

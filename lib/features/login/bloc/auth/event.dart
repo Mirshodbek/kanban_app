@@ -5,6 +5,7 @@ abstract class EventBlocAuth {}
 class EventAuthInit extends EventBlocAuth {}
 
 class EventAuthLogout extends EventBlocAuth {}
+class EventAuthRefreshToken extends EventBlocAuth {}
 
 class EventAuthLogin extends EventBlocAuth {
   EventAuthLogin({

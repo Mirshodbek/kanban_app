@@ -37,11 +37,10 @@ class _BasicInterceptor implements Interceptor {
     options.contentType = 'application/json; charset=utf-8';
     options.headers = {
       'Content-Type': 'application/json',
-      "Authorization": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyMzksInVzZXJuYW1lIjoiYXJtYWRhIiwiZXhwIjoxNjM3ODIzNDUxLCJlbWFpbCI6IiIsIm9yaWdfaWF0IjoxNjM3ODE5ODUxfQ.V5v3ZD5IAgKQGiscf3NZzO0iziQLpnDB_cOoNyMhljo",
+      "Authorization": "JWT $token",
     };
     handler.next(options);
   }
-
   @override
   void onResponse(Response response, ResponseInterceptorHandler handler) {
     handler.next(response);

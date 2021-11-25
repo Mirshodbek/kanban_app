@@ -1,7 +1,5 @@
 part of 'bloc_kanban.dart';
 
-abstract class EventBlocKanban{}
+abstract class EventBlocKanban {}
 
-class EventReadKanban extends EventBlocKanban{
-
-}
+class EventReadKanban extends EventBlocKanban {}

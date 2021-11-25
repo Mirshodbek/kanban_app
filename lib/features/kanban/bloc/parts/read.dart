@@ -7,8 +7,13 @@ extension Read on BlocKanban {
   ) async {
     emit(StateKanbanLoading());
     final kanbans = await cacheRepo.getItems();
-    // if (kanbans.data == null||kanbans.data!.isEmpty) {
+    if (kanbans.data == null || kanbans.data!.isEmpty) {
       final result = await repo.getKanbans();
+      if (result.error?.code == 401) {
+        emit(StateKanbanErrorToken());
+        emit(StateKanbanLoading());
+        return;
+      }
       if (result.error != null) {
         emit(
           StateKanbanError(
@@ -26,12 +31,12 @@ extension Read on BlocKanban {
         ),
       );
       return;
-    // } else {
-    //   emit(
-    //     StateKanbanInitial(
-    //       kanbans.data ?? [],
-    //     ),
-    //   );
-    // }
+    } else {
+      emit(
+        StateKanbanInitial(
+          kanbans.data ?? [],
+        ),
+      );
+    }
   }
 }

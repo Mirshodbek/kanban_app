@@ -26,6 +26,7 @@ Future<ResultRepoKanban> _getKanbans(
     if (error is DioError) {
       appError = AppError(
         message: error.response?.data?['detail'],
+        code: error.response?.statusCode,
       );
     }
     return ResultRepoKanban(

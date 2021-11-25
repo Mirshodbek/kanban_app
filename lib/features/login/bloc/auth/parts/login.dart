@@ -18,7 +18,6 @@ extension Login on BlocAuth {
       );
       return;
     }
-
     await repoCacheAuth.addItem(
       AuthData(
         username: event.username,

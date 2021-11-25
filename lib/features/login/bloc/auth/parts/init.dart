@@ -5,11 +5,11 @@ extension Init on BlocAuth {
     event,
     Emitter<StateBlocAuth> emit,
   ) async {
+    api.blocAuth = this;
     emit(StateAuthLoading());
     final cache = await repoCacheAuth.getItem();
     if (cache.data != null) {
       emit(StateAuthAuthorized(token: cache.data!.token!));
-      print(token);
       return;
     } else {
       emit(

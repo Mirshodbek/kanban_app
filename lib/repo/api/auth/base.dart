@@ -5,6 +5,10 @@ abstract class BaseRepoAuth {
     String username,
     String password,
   );
+
+  Future<ResultRepoAuth> refreshToken(
+    String token,
+  );
 }
 
 class ResultRepoAuth {
