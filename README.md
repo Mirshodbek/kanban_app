@@ -1,16 +1,35 @@
 # kanban_app
 
-A new Flutter project.
+ Тестовое задание flutter
 
-## Getting Started
+ Необходимо реализовать мобильное приложение kanban доски по аналогии с trello.com
 
-This project is a starting point for a Flutter application.
+ Видео-пример - https://yadi.sk/i/Ai0ShSdq36A5OQ
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+ Требования:
+    1. Использовать Flutter
+    2. Использовать Bloc
+    3. Использовать API - https://trello.backend.tests.nekidaem.ru/redoc/
+    4. Использовать https://pub.dev/packages/dio
+    5. Код выложить на github
+    6. Будет плюсом если успеете:
+        a. Вывод ошибок от бэка
+        b. Реализация offline режима на основе https://pub.dev/packages/hive, чтобы можно было просматривать карточки без интернета.
+        c. “Локализация”
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+ На выполнение задачи 2-3 дня.
+
+ Первый экран:
+    1. Форма входа “логин и пароль”
+    2. Логиниться на бэк нужно с данными логина - “armada”  и паролем “FSH6zBZ0p9yH”
+    3. В случае неверного ввода данных отображать ошибки, которые возвращает сервер.
+
+ Второй экран:
+    1. Выводим списки “On hold”, “In progress”, “Needs review”, “Approved”
+    2. Выводим карточки в этих списках.
+    3. Перетаскивание между списками делать НЕ нужно.
+    4. На экране должен быть виден один список в единицу времени.
+    5. Переключение между списками должен происходить свайпом влево или вправо.
+    6. На экране должна присутствовать кнопка выхода.

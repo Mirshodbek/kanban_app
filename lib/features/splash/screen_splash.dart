@@ -15,7 +15,7 @@ class ScreenSplash extends StatelessWidget {
         child: BlocListener<BlocAuth, StateBlocAuth>(
           listener: (context, state) {
             if (state is StateAuthLogin) {
-              Navigator.push(
+              Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
                   builder: (_) => const ScreenLogin(),
@@ -23,7 +23,7 @@ class ScreenSplash extends StatelessWidget {
               );
             }
             if (state is StateAuthAuthorized) {
-              Navigator.push(
+              Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
                   builder: (_) => const ScreenKanban(),

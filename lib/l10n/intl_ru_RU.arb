@@ -1,0 +1,13 @@
+{
+  "github":"Github",
+  "noAccount": "Нет аккаунта",
+  "login": "Войти",
+  "inputError": "Проверьте ввод",
+  "userName": "Имя пользователя",
+  "searchUser": "Поиск пользователя",
+  "errorGeneral": "Что-то пошло не так :-(",
+  "noUser": "Нет подходящий пользователя",
+  "repositories": "Репозитори",
+  "back": "Назад",
+  "description": "Описания"
+}
