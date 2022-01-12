@@ -8,6 +8,7 @@
 
 
  Требования:
+
     1. Использовать Flutter
     2. Использовать Bloc
     3. Использовать API - https://trello.backend.tests.nekidaem.ru/redoc/
